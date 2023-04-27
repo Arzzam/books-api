@@ -1,5 +1,5 @@
 import React from "react";
-import BookImg from "../../assets/defaultBook.png";
+import BookImage from "../../assets/defaultBook.png";
 
 const BookItem = ({ id, volumeInfo }) => {
   let { title, authors, publisher, previewLink, imageLinks } = volumeInfo;
@@ -16,7 +16,7 @@ const BookItem = ({ id, volumeInfo }) => {
     >
       <div>
         <img
-          src={imageLinks ? imageLinks.thumbnail : BookImg}
+          src={imageLinks ? imageLinks.thumbnail : BookImage}
           alt="Product-img"
           className="w-48 rounded-xl"
         />
