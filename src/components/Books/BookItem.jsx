@@ -18,25 +18,30 @@ const BookItem = ({ id, volumeInfo }) => {
         <img
           src={imageLinks ? imageLinks.thumbnail : BookImg}
           alt="Product-img"
-          className="w-full rounded-xl"
+          className="w-48 rounded-xl"
         />
       </div>
-      <div>
+      <div className="mt-2">
         {title && <h3 className="font-semibold">{title}</h3>}
         {authors && (
-          <h4>
-            Author: <span>{authors} </span>
+          <h4 className="font-semibold">
+            Author: <span className="font-normal">{authors} </span>
           </h4>
         )}
         {publisher && (
-          <h4>
-            Author: <span>{publisher} </span>
+          <h4 className="font-semibold">
+            Author: <span className="font-normal">{publisher} </span>
           </h4>
         )}
         {previewLink && (
-          <h4>
+          <h4 className="font-semibold">
             Read more:{" "}
-            <a href={previewLink} target="_blank" rel="noreferrer">
+            <a
+              className="font-normal"
+              href={previewLink}
+              target="_blank"
+              rel="noreferrer"
+            >
               Google Books
             </a>
           </h4>
